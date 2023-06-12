@@ -1,7 +1,10 @@
 const table = document.createElement('table');
 table.classList.add('table');
 
+const fragment = document.createDocumentFragment();
+
 let count = 1;
+
 for (let i = 0; i < 10; i++) {
     let tr = document.createElement('tr');
 
@@ -12,7 +15,8 @@ for (let i = 0; i < 10; i++) {
         count++;
     }
 
-    table.append(tr);
+    fragment.append(tr);
 }
 
+table.append(fragment);
 document.body.append(table);
